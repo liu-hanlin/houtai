@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.4.1.js"></script>
+</head>
+
+<body>
+    <p class="a">
+        你是谁的谁，为谁流眼泪
+    </p>
+    <script>
+
+        $(function () {
+            var R = 100;
+            var G = 200;
+            var B = 50;
+            var timer;
+            timer = setInterval(auto, 140);
+            function auto() {
+               
+                if (G>=0) {
+                    G += 10
+                    if(G>=250){
+                   G=0
+                    }
+                } if (R>=0) {
+                    R += 25
+                    if(R>=250){
+                   R=0
+                    }
+                }if (B>=0) {
+                    B += 50
+                    if(B>=250){
+                   B=0
+                    }
+                }
+               
+                $('.a').css('color', 'rgb(' + R + ',' + G + ',' + B + ')')
+                console.log(R,B,G);
+                
+            }
+            
+        })
+    </script>
+</body>
+
+</html>
